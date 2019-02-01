@@ -25,6 +25,8 @@ class Carousel {
             });
             Array.from(this.images).forEach(e => {
                 if (e.dataset.index === this.newIndex('left', currentIndex, imageQuantity)) {
+                    e.style.opacity = '0';
+                    TweenLite.to(e, 1, {opacity:"1"});
                     e.style.display = '';
                 }
                 else {
@@ -42,6 +44,8 @@ class Carousel {
             });
             Array.from(this.images).forEach(e => {
                 if (e.dataset.index === this.newIndex('right', currentIndex, imageQuantity)) {
+                    e.style.opacity = '0';
+                    TweenLite.to(e, 1, {opacity:"1"});
                     e.style.display = '';
                 }
                 else {
